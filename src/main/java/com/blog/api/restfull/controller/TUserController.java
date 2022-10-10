@@ -23,17 +23,17 @@ public class TUserController {
         return user.find(id);
     }
 
-    @GetMapping(value = "/save")
+    @PostMapping(value = "/save")
     public TUserDto save(@RequestBody TUserDto dto){
         return user.save(dto);
     }
 
-    @GetMapping(value = "/update")
+    @PutMapping(value = "/update")
     public TUserDto update(@RequestBody TUserDto dto){
         return user.update(dto);
     }
 
-    @GetMapping(value = "/delete{id}")
+    @DeleteMapping(value = "/delete{id}")
     public boolean delete(@PathVariable Long id){
         return user.delete(id);
     }

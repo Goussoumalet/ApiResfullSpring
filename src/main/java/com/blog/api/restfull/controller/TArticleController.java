@@ -24,17 +24,17 @@ public class TArticleController {
         return article.find(id);
     }
 
-    @GetMapping(value = "/save")
+    @PostMapping(value = "/save")
     public TArticleDto save(@RequestBody TArticleDto dto){
         return article.save(dto);
     }
 
-    @GetMapping(value = "/update")
+    @PutMapping(value = "/update")
     public TArticleDto update(@RequestBody TArticleDto dto){
         return article.update(dto);
     }
 
-    @GetMapping(value = "/delete{id}")
+    @DeleteMapping(value = "/delete{id}")
     public boolean delete(@PathVariable Long id){
         return article.delete(id);
     }

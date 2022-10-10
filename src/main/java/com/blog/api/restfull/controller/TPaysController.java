@@ -23,17 +23,17 @@ public class TPaysController {
         return pays.find(id);
     }
 
-    @GetMapping(value = "/save")
+    @PostMapping(value = "/save")
     public TPaysDto save(@RequestBody TPaysDto dto){
         return pays.save(dto);
     }
 
-    @GetMapping(value = "/update")
+    @PutMapping(value = "/update")
     public TPaysDto update(@RequestBody TPaysDto dto){
         return pays.update(dto);
     }
 
-    @GetMapping(value = "/delete{id}")
+    @DeleteMapping(value = "/delete{id}")
     public boolean delete(@PathVariable Long id){
         return pays.delete(id);
     }

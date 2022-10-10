@@ -23,17 +23,17 @@ public class TCategoryController {
         return category.find(id);
     }
 
-    @GetMapping(value = "/save")
+    @PostMapping(value = "/save")
     public TCategoryDto save(@RequestBody TCategoryDto dto){
         return category.save(dto);
     }
 
-    @GetMapping(value = "/update")
+    @PutMapping(value = "/update")
     public TCategoryDto update(@RequestBody TCategoryDto dto){
         return category.update(dto);
     }
 
-    @GetMapping(value = "/delete{id}")
+    @DeleteMapping(value = "/delete{id}")
     public boolean delete(@PathVariable Long id){
         return category.delete(id);
     }

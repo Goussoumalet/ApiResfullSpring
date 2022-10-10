@@ -23,17 +23,17 @@ public class TCommentController {
         return comment.find(id);
     }
 
-    @GetMapping(value = "/save")
+    @PostMapping(value = "/save")
     public TCommentDto save(@RequestBody TCommentDto dto){
         return comment.save(dto);
     }
 
-    @GetMapping(value = "/update")
+    @PutMapping(value = "/update")
     public TCommentDto update(@RequestBody TCommentDto dto){
         return comment.update(dto);
     }
 
-    @GetMapping(value = "/delete{id}")
+    @DeleteMapping(value = "/delete{id}")
     public boolean delete(@PathVariable Long id){
         return comment.delete(id);
     }
